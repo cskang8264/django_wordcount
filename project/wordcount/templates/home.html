@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<h1>Wordcount Here</h1>
+
+<a href="{%url 'about'%}">ABOUT</a>
+
+<form action="{%url 'result'%}">
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br>
+    <input type="submit" value="COUNT" />
+</form>
+
+{% endblock %}

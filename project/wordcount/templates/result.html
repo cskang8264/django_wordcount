@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+
+<h1>Wordcount Result. Total ({{total}}) words.</h1>
+
+<a href="{%url 'home'%}">다시 하기</a>
+<br>
+<h2> 입력한 텍스트 : </h2>
+{{full}}
+<h2> 단어 카운트 : </h2>
+{% for word, count in dictionary%}
+{{word}} : {{count}}
+<br>
+{%endfor%}
+
+
+
+{% endblock %}
